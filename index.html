@@ -9,7 +9,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon-bee.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -28,7 +28,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- Lottie Animation Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+  <script src="assets/js/lottie.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       lottie.loadAnimation({
@@ -36,8 +36,28 @@
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'bee.json' // Update the path to your bee.json file
+        path: 'assets/img/bee-consultant.json' // Update the path to your bee-consultant.json file      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lottie.loadAnimation({
+        container: document.getElementById('lottie-hero'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/img/bee-consultant.json' // Update the path to your bee-consultant.json file
       });
+  
+      lottie.loadAnimation({
+        container: document.getElementById('lottie-logo'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/img/logo-bee.json' // Update the path to your logo-bee.json file
+      });
+        // 애니메이션 속도를 조절 (0.5배 속도로 설정)
+        lottie.setSpeed(0.5);
     });
   </script>
 </head>
@@ -46,11 +66,11 @@
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo.png" alt="">
+        <div id="lottie-logo" style="width: 100px; height: 100px;"></div>
         <h1 class="sitename">DexterBee</h1>
       </a>
+
 
       <nav id="navmenu" class="navmenu">
         <ul>
