@@ -54,7 +54,10 @@
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'assets/img/logo-bee.json' // Update the path to your logo-bee.json file
+        path: 'assets/img/logo-bee.json',
+        rendererSettings: {
+          scaleMode: 'scaleDown'
+        } 
       });
         // 애니메이션 속도를 조절 (0.5배 속도로 설정)
         lottie.setSpeed(0.5);
